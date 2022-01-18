@@ -173,6 +173,7 @@ func (a *APIEnv) UpdateTodo(c *gin.Context) {
 		httputil.NewError(c, http.StatusInternalServerError, err)
 		return
 	}
+	updatedTodo.ID = uint(i)
 
 	if err := database.UpdateTodo(a.DB, &updatedTodo); err != nil {
 		httputil.NewError(c, http.StatusInternalServerError, err)

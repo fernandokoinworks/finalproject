@@ -76,7 +76,7 @@ func (a *APIEnv) GetTodo(c *gin.Context) {
 // @ID create-todo
 // @Accept json
 // @Produce json
-// @Param RequestBody body models.Todo true "request body json"
+// @Param RequestBody body models.ReqTodo true "request body json"
 // @Success 201 {object} models.Todo
 // @Failure 400 {object} httputil.HTTPError
 // @Failure 404 {object} httputil.HTTPError
@@ -144,7 +144,7 @@ func (a *APIEnv) DeleteTodo(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Param id path int true "id"
-// @Param RequestBody body models.Todo true "request body json"
+// @Param RequestBody body models.Req	Todo true "request body json"
 // @Success 200 {object} models.Todo
 // @Failure 400 {object} httputil.HTTPError
 // @Failure 404 {object} httputil.HTTPError
